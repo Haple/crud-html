@@ -8,16 +8,19 @@
 		<section id="listaAlunos" name="listaAlunos">
 				
 		</section>
-		<form id="aluno" name="aluno">
+		<form id="cadastro" name="cadastro">
 			<label for="ra">RA</label>
 			<input type="number" id="ra" name="ra" placeholder="Qual seu RA?">
 			
 			<label for="nome">Nome</label>
 			<input type="text" id="nome" name="nome" placeholder="Qual seu nome?">
 
-			<button type="button" onclick="novoAluno(aluno.ra.value,
-						aluno.nome.value)">
-				Criar
+			<button type="button"
+				alt="Criar Aluno"
+				class="btn" 
+				onclick="novoAluno(cadastro.ra.value,
+						cadastro.nome.value)">
+				<img src="./imgs/criar.svg"/>
 			</button>
 		</form>
 		<script src="main.js"></script>

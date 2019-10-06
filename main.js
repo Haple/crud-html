@@ -61,29 +61,40 @@ function excluirAluno(id){
 function gerarAluno(ra,nome){
 	let id = idAtual++;
 	return `
-		<section id="${LINHA+id}" name="${LINHA+id}">
+		<section class="linha"
+			id="${LINHA+id}" name="${LINHA+id}">
 			<label for="${RA+id}">RA</label>
 			<input type="number" id="${RA+id}" name="${RA+id}" value="${ra}" disabled/>
 
 			<label for="${NOME+id}">Nome</label>
 			<input type="text" id="${NOME+id}" name="${NOME+id}" value="${nome}" disabled/>
-			<button type="button" onclick="editarAluno(${id})">
-				Editar
-			</button>
-			<button type="button" onclick="excluirAluno(${id})">
-				Excluir
+			<button type="button"
+				class="btn"
+				alt="Editar aluno"
+				onclick="editarAluno(${id})">
+				<img src="./imgs/editar.svg"/>
 			</button>
 			<button type="button"
+				class="btn"
+				alt="Excluir aluno"
+				onclick="excluirAluno(${id})">
+				<img src="./imgs/deletar.svg"/>
+			</button>
+			<button type="button"
+				class="btn"
+				alt="Confirmar edição"
 				id="${BTN_CONFIRMAR+id}"
 				name="${BTN_CONFIRMAR+id}"
 				onclick="confirmarEdicao(${id})" hidden>
-				Confirmar
+				<img src="./imgs/confirmar.svg"/>
 			</button>
 			<button type="button"
+				class="btn"
+				alt="Cancelar edição"
 				id="${BTN_CANCELAR+id}"
 				name="${BTN_CANCELAR+id}"
 				onclick="cancelarEdicao(${id})" hidden>
-				Cancelar
+				<img src="./imgs/cancelar.svg"/>
 			</button>
 		</section>
 	`;
